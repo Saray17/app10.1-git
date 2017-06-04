@@ -1,0 +1,793 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Primera Aplicacion</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="js/thema-app10.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--<link rel="stylesheet" href="css/cjquery.mobile-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/> -->
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine2/style.css" />
+<script type="text/javascript" src="engine2/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+
+ <body onLoad="MM_preloadImages('imagenes/cbtis3.jpg','imagenes/aulas1.jpg','imagenes/imag6.jpg','imagenes/computo2.jpg','imagenes/tallerelec.jpg','imagenes/admni2.jpg','imagenes/imag5.JPG')">
+ 
+    <div data-role="page" id="Principal" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-black-btn-txt="Regresar" data-back-btn-theme="b">
+     <h1>Datos personales del alumno</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1>CBTis 16</h1>
+       <div align="center">
+       <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dgs','','imagenes/imag5.JPG',1)"><img src="imagenes/imag4.jpg" width="275" height="158" id="dgs"></a> </div>
+     </div>
+    </div>
+    <div>
+     <ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+        <h2>¿Qué es la DGTI?</h2>
+        <p>Se muestra informacion sobre la DGTI</p>
+       </a>
+     </li>
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>¿Qué es el  CBTis?</h2>
+         <p>Se muestra informacion sobre el CBTis</p>
+       </a>
+     </li>
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Especialidades</h2>
+         <p>Se muestran datos sobre la especialidad</p>
+       </a>
+     </li>
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Instalaciones</h2>
+         <p>Se muestran las instalaciones del CBTis</p>
+       </a>
+     </li>
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Becas</h2>
+         <p>Se muestran las Becas que ofrece el CBTis 16</p>
+       </a>
+     </li>
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Espacios Culturales</h2>
+         <p>Se  muestran los talleres que ofrece el CBTis</p>
+       </a>
+     </li>
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Deportes</h2>
+         <p>Se muestran los deportes que se realizan en el CBTis</p>
+       </a>
+     </li>
+      <li class="ui-first-child ui-last-child">
+       <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Hubicación</h2>
+         <p>Se muestra la Hubicación del plantel</p>
+       </a>
+     </li>
+      <li class="ui-first-child ui-last-child">
+       <a href="#Pagina9" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Elaborado Por:</h2>
+         <p>muestra otros gustos del alumno</p>
+       </a>
+     </li>
+     </ul>
+    </div>
+    <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+      <div>
+        <img src="res/android/mdpi.png" width="46" height="46">
+      </div>
+      <div>
+       <h4>Proyecto Final</h4>
+       <h4>Saray Violeta Othon Higuera</h4>
+      </div>
+     </div>
+     </div>
+ <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1> ¿Qué es la DGTI?</h1>
+      </div>
+      <div data-role="content" align="center">
+       <div>
+       <center> <h2> La Dirección General de Educación Tecnológica Industrial (DGETI) es una dependencia adscrita a la Subsecretaría de Educación Media Superior (SEMS) que ofrece el servicio educativo de nivel medio superior tecnológico.</h2></center>
+
+<center><h2>Actualmente, la DGETI es la institución de educación media superior tecnológica más grande del país, con una infraestructura física de 1,366 Centros  Educativos a Nivel Nacional,  de los cuales, 168 son Centros de Estudios Tecnológico Industriales y de Servicios (CETIS) y 271 Centros de Bachillerato Tecnológico Industrial y de Servicios (CBTIS).</h2></center>  
+
+<center><h2>Además, ha promovido la creación de al menos 288 Centros de Estudios Científicos y Tecnológicos en los Estados (CECYTES), que operan bajo un sistema descentralizado.</h2></center>
+
+<center><h2>La DGETI cuenta con el Sistema Abierto de Educación Tecnológica Industrial (SAETI) el cual es la modalidad sabatina ofreciendo el Bachillerato Tecnológico Bivalente en el subsistema de educación media superior. La educación abierta promueve el estudio independiente, el usuario estudia el material didáctico en su tiempo libre, sin necesidad de asistir diariamente al plantel en un horario establecido para concluir sus estudios.</h2></center>
+
+
+     <div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href=" https://www.google.com.mx/maps/uv?hl=es&pb=!1s0x85d1fe9d57735e2d%3A0xb32759f6f8c9fb8c!2m19!2m2!1i80!2i80!3m1!2i20!16m13!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!3m1!7e115!4shttp%3A%2F%2Fwww.cbtis179.edu.mx%2Fportal%2Findex.php%2Finformacion-general%2Fdependencias%2Fque-es-la-dgeti!5sdgeti%20-%20Buscar%20con%20Google&imagekey=!1e2!2sEg_9zBQTqk8SLGFF6xd9Fw&sa=X&ved=0ahUKEwim_tL4lp3UAhXIiVQKHUq4AiAQoioIcjAM " target="_self" data-role="button">
+         <h2> Mapa </h2>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+
+       </div>
+      </div>
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+     </div>
+      
+      
+ <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1>¿Que es el CBTis?</h1>
+      </div>
+      <div data-role="content" align="center">
+       <div>
+        <h2>C.B.T.i.s. es el acrónimo de Centro de Bachillerato Tecnológico Industrial y de Servicios, establecido en México, a través de la Dirección General de Educación Tecnologica Industrial (DGETI); y la Subsecretaría de Educación Media Superior (SEMS).</h2>
+        
+        <h2> Ofrece la modalidad de Bachillerato Tecnológico, DGETI es el subsistema de educación Media superior más grande de México.</h2>
+        
+       <center> <h2>Oferta educativa</h2></center>
+
+<center><p>Actualmente, en el total de centros, cuenta con las siguientes preparaciones técnicas:</p></center>
+<center>•Administración
+<br>
+•    Administración de Recursos Humanos
+<br>
+•    Alimentos
+<br>
+•    Alimentos y bebidas
+<br>
+•    Arquitectura
+<br>
+•    Arquitectónica
+<br>
+
+•    Computación
+<br>
+•    Contabilidad</center>
+
+        </div>
+        <div>
+    <center>    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('img','','imagenes/cbtis3.jpg',1)"><img src="imagenes/cbtis.jpg" width="286" height="317" id="img"></a></center> </div>
+
+
+<div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href="http://www.cbtis016.edu.mx/" target="_self" data-role="button">
+         <center><h2> CBTis 16</h2></center>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+
+    
+    
+    </div>
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+       </div>
+       
+       
+ <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1>Especialidades:</h1>
+      </div>
+      
+      <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1> TÉCNICO EN MECÁNICA INDUSTRIAL </h1>
+       <div>
+   
+         <p>Profesionista que da mantenimiento a los sistemas de transmisión de potencia utilizando las máquinas herramientas convencionales, de control numérico, máquinas de soldar con arco eléctrico y oxigas auxiliándose de los procesos de ajuste de piezas mecánicas.
+<center><h2>COMPETENCIAS PROFESIONALES</h2></center>
+ <center><img src="imagenes/programacion.jpg" width="276" height="257"></center>
+        <br>
+        PERFIL DE EGRESO
+Durante el proceso de formación de los cinco módulos, el estudiante desarrollará o reforzará las siguientes competencias profesionales, correspondientes al Técnico en <center><h2>Mecánica Industrial:</h2></center>
+<br>
+<center>•	 Suelda y ajusta piezas mecánicas.
+<br>
+•	 Maquina piezas mecánicas en talador y torno.
+<br>
+•	 Maquina piezas mecánicas en fresadora, rectificadora y cepillo.
+<br>
+•	 Maquina piezas mecánicas por CNC.
+<br>
+•	 Mantiene sistemas de transmisión de potencia.</center>
+<br>
+<center><h2>OPORTUNIDADES DE INSERCIÓN LABORAL.</h2></center>
+Industrias de transformación y procesos como: Textiles, del plástico, petroleras, metalmecánica, automotriz, pesqueras, mineras, siderúrgicas, agrícolas, alimenticia, química, de muebles, forestal, papelera, gráfica y en general todo tipo de industria de la producción y manufacturera que utilice maquinaria entre otras.
+
+</p>
+
+    <div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href="http://www.uanl.mx/oferta/bachiller-tecnico-en-mecanica-automotriz-y-autotronica.html" target="_self" data-role="button">
+         <h2> Link</h2>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+    
+       </div>
+     </div>
+    </div>
+      </div>
+      
+       <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1>TÉCNICO EN ELECTRICIDAD</h1>
+       <div>
+    
+         <p>La carrera de Técnico en Electricidad permite al estudiante sustentar la demanda de ocupación de Técnicos Electricistas en el sector productivo y de servicios, capaz de diseñar y realizar instalaciones eléctricas residenciales y comerciales, así como proporcionar mantenimiento a máquinas eléctricas.
+<center><h2>COMPETENCIAS PROFESIONALES</h2></center>
+<center><img src="imagenes/electricidad.JPG" width="312" height="278"></center>
+        <br>
+     <center>  <h2> PERFIL DE EGRESO</h2></center>
+Durante el proceso de formación de los cinco módulos, el estudiante desarrollará o reforzará las siguientes competencias profesionales, correspondientes al Técnico en Electricidad.
+<br>
+<center>•	 Desarrolla instalaciones eléctricas residenciales y comerciales.
+<br>
+•	 Mantiene los motores y generadores de CA y CC.
+<br>
+•	 Mantiene en operación los circuitos de control electromagnético y electrónico.
+<br>
+•	 Mantiene los sistemas de iluminación y de energía renovable.
+<br>
+•	 Mantiene instalaciones eléctricas de media y baja tensión.</p>
+<br>
+<center> <h2>OPORTUNIDADES DE INSERCIÓN LABORAL.</h2></center>
+Todas estas competencias posibilitan al egresado su incorporación al mundo laboral o desarrollar procesos productivos independientes, de acuerdo con sus intereses profesionales o las necesidades en su entorno social.
+
+</p>
+ <div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href="https://www.tec.ac.cr/programas-academicos/tecnico-electricidad" target="_self" data-role="button">
+         <h2> Link</h2>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+    
+    
+       </div>
+     </div>
+    </div>
+      </div>
+      
+       <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1> TÉCNICO EN PROGRAMACIÓN </h1>
+       <div>
+         <p>Persona con conocimientos, habilidades y actitudes, capaz de ingresar a empresas de desarrollo de software, diseño gráfico, mantenimiento, outsourcing.
+         <center><h2>COMPETENCIAS PROFESIONALES</h2></center>
+         <br>
+          <center><img src="imagenes/programacion.jpg" width="301" height="218"></center>
+        <br>
+        <center><h2>PERFIL DE EGRESO</h2></center>
+        <br>
+La formación que ofrece la carrera de Técnico en programación permite al egresado, a través de la articulación de saberes de diversos campos, realizar actividades dirigidas a la:
+o	Instalación y desarrollo de software de aplicación utilizando programación estructurada y orientada a objetos en ambientes web y móviles, con almacenamiento persistente de datos.
+o	 Así como la configuración y administración de plataforma e-learning y Comercio electrónico.
+<center><h2>OPORTUNIDADES DE INSERCIÓN LABORAL.</h2></center>
+<br>
+<center>•	 Desarrolladores de software
+<br>
+•	 Analistas de sistemas
+<br>
+•	Analista de programas de cómputo
+<br>
+•	 Programador de sistemas de cómputo
+<br>
+•	 Edición de software y edición de software integrada con la reproducción
+<br>
+•	 Escuelas de computación del sector privado
+<br>
+•	 Servicios de diseño de sistemas de cómputo y servicios relacionados
+<br>
+•	 Escuelas de computación del sector público</center>
+ 
+         </p>
+         
+            <div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href="http://www.ipn.mx/mediasuperior/Paginas/Tec-Pro.aspx" target="_self" data-role="button">
+         <h2> Link</h2>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+    
+       </div>
+     </div>
+    </div>
+      </div>
+      
+       <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1> TÉCNICO EN LOGISTICA</h1>
+       <div>
+         <p>Ofrece las competencias profesionales que permiten al estudiante realizar actividades dirigidas a la administración de bienes, planificando los suministros destinados al almacenamiento de manera manual y electrónica, la organización de los nodos logísticos para el transporte de mercancías, así como proveer los servicios y atención al cliente sobre los movimientos y los costos de la cadena logística.
+         <br>
+<center><h2>COMPETENCIAS PROFESIONALES
+PERFIL DE EGRESO</h2></center>
+<br>
+
+ <center><img src="imagenes/logistica.jpg" width="237" height="248"></center>
+ <br>
+Durante el proceso de formación de los cinco módulos, el estudiante desarrollara o reforzará las siguientes competencias profesionales:
+<br>
+<center>•	 Supervisa el proceso de suministrio de bienes.
+<br>
+•	 Apoya el proceso de administración al servicio de almacenaje de bienes.
+<br>
+•	 Organiza el transporte de mercancías.
+<br> 
+•	Proveve servicio de atencion al cliente sbre los movimientos de logistica. Organiza los costos de la cadena logística y de las competencias de productividad y empleabilidad:
+<br>
+•	 Atencion al proceso
+<br>
+•	Planeación y organización
+<br>
+•	Ética profesional
+<br>
+•	Comunicación efectiva
+<br>
+•	Trabajo en equipo
+<br>
+•	Atención al cliente
+<br>
+•	Relaciones interpersonales</center>
+<br>
+  <h2> <center>OPORTUNIDADES DE INSERCIÓN LABORAL</center></h2>
+Nuestro país presenta una amplia diversidad de procesos de producción, desde los que utilizan tecnología moderna, hasta sistemas tradicionales; este hecho contribuye a diversificar las ocupaciones, los Comités interinstitucionales de Formación Profesional decidieron utilizar los siguientes: Sectores industriales, comerciales y de servicios, públicos o privados: Escuelas, constructoras, fábricas, centros comerciales, hospitales, inmobiliarias, hoteles, instituciones de crédito, despachos contables y tiendas de autoservicio. Autoempleo 
+</p>
+    
+        
+       </div>    
+     </div>
+    </div>
+      </div>
+     
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+       </div>  
+       
+       
+ <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1>Instalaciones</h1>
+      </div>
+      <div data-role="content" align="center">
+       <div>
+       
+        
+        <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1>Contamos con aproximadamente 30 aulas para los estudiantes </h1>
+      <div>
+      <h2>Aquí podrás desarrollar tus actividades durante el día, comodamente:</h2>
+      </div>
+
+       <div>
+         <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image41','','imagenes/aulas1.jpg',1)"><img src="imagenes/aulas.jpg" width="200" height="128" id="Image41"></a> </div>
+       </div>
+       </div>
+       </div>
+     
+     
+         
+        <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+     <div>
+      <h2>Aquí podremos ayudarte con los problemas que tengas, para esto contamos con los siguentes espacios educativos:  </h2>
+      </div>
+
+      <h1>Instalaciones Administrativas </h1>
+      <center><p>•Control Escolar</p></center>
+      <center><p>•Direccion</p></center>
+     <center> <p>•Subdireccion </p></center>
+      <center><p>•Enfermeria</p></center>
+      
+       <div align="center"> 
+         <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('admi','','imagenes/admni2.jpg',1)"><img src="imagenes/admni.jpg" width="275" height="158" id="admi"></a> </div>
+       </div>
+       </div>
+       </div>
+       
+       
+             <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1> Taller de Programación </h1>
+      <div>
+      <h2>Aquí Podras realizar tus actividades comodamente, contamos con los equipos necesarios para cada estudiante</h2>
+      </div>
+<div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('pro','','imagenes/computo2.jpg',1)"><img src="imagenes/computo.jpg" width="275" height="158" id="pro"></a>
+      </div> 
+       </div>
+    </div>
+      </div>
+         <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1> Taller de Electricidad</h1>
+      <div>
+      <h2>Aquí Podras realizar tus actividades comodamente, contamos con todos los servicios para tus precticas, ademas de que cuentan con todas las maquinas necesarias para  realizar tus actividades</h2>
+      </div>
+ <div align="center">
+   <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('elec','','imagenes/tallerelec.jpg',1)"><img src="imagenes/taller.jpg" width="275" height="158" id="elec"></a> </div>
+     </div>
+    </div>
+      </div> 
+         <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1> Taller de Mecanica Industrial </h1>
+      
+      <div>
+      <h2>Aquí Podras realizar tus actividades comodamente, contamos con todos los servicios para tus precticas, ademas de que cuentan con todas las maquinas necesarias para  realizar tus actividades</h2>
+      </div>
+
+       <div>
+         <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('mecanica','','imagenes/mecanica3.jpg',0)"><img src="imagenes/mecanica2.jpg" width="275" height="158" id="mecanica"></a> </div>
+     </div>
+    </div>
+      </div>
+       
+         </div>
+       </div>
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+       </div>
+       </div>
+       
+       
+ <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1>Becas</h1>
+      </div>
+      <div data-role="content" align="center">
+       <div>
+        <center><h2>En esta sección se describen los diferentes tipos de becas que otorga la Secretaría de Educación Pública (SEP) a través de la Subsecretaría de Educación Media Superior (SEMS)</h2></center>
+        
+      <center>  <p>•GOBIERNO FEDERAL
+      <br>
+
+•EXCELENCIA PROMEDIO
+<br>
+•INGRESO
+<br>
+•PERMANENCIA
+<br>
+•SALARIO PRÁCTICAS PROFESIONALES
+<br>
+•CONTRA EL ABANDONO ESCOLAR </p></center>
+        </div>
+        
+        
+           <div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href="http://www.becasmediasuperior.sep.gob.mx/" target="_self" data-role="button">
+         <h2> Link</h2>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+    
+    
+    <h2>GOBIERNO ESTATAL</h2>
+
+<p>•  OPORTUNIDADES </p>
+
+ <div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href="http://www.gob.mx/prospera" target="_self" data-role="button">
+         <h2> Link</h2>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+      
+       </div>
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+    </div>
+    
+ <div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1>Espacios Culturales</h1>
+      </div>
+      <div data-role="content" align="center">
+       <div>
+        <h2>Contamos con una gran variedad de actividades que podras realizar como por ejemplo:</h2>
+        <p>• Taller de Danza</p>
+        <p>• Banda de Guerra</p>
+        <p>• Bastoneras </p>
+        <p>• Oratoria </p>
+        <p>• Fotografía</p>
+        <p>• Ajedrez</p> 
+        <p>• Dibujo</p>
+       </div>
+      </div>
+      <div>
+     
+     
+     
+     <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/cultural1.jpg" alt="cultural1" title="cultural1" id="wows1_0"/></li>
+		<li><img src="data1/images/cultural2.jpg" alt="cultural2" title="cultural2" id="wows1_1"/></li>
+		<li><img src="data1/images/cultural3.jpg" alt="cultural3" title="cultural3" id="wows1_2"/></li>
+		<li><img src="data1/images/cultural4.jpg" alt="cultural4" title="cultural4" id="wows1_3"/></li>
+		<li><img src="data1/images/cultural5.jpg" alt="cultural5" title="cultural5" id="wows1_4"/></li>
+		<li><img src="data1/images/cultural6.jpg" alt="cultural6}" title="cultural6}" id="wows1_5"/></li>
+		<li><a href="http://wowslider.net"><img src="data1/images/cultural7.jpg" alt="http://wowslider.net/" title="cultural7" id="wows1_6"/></a></li>
+		<li><img src="data1/images/cultural8.jpg" alt="cultural8" title="cultural8" id="wows1_7"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="cultural1"><span><img src="data1/tooltips/cultural1.jpg" alt="cultural1"/>1</span></a>
+		<a href="#" title="cultural2"><span><img src="data1/tooltips/cultural2.jpg" alt="cultural2"/>2</span></a>
+		<a href="#" title="cultural3"><span><img src="data1/tooltips/cultural3.jpg" alt="cultural3"/>3</span></a>
+		<a href="#" title="cultural4"><span><img src="data1/tooltips/cultural4.jpg" alt="cultural4"/>4</span></a>
+		<a href="#" title="cultural5"><span><img src="data1/tooltips/cultural5.jpg" alt="cultural5"/>5</span></a>
+		<a href="#" title="cultural6}"><span><img src="data1/tooltips/cultural6.jpg" alt="cultural6}"/>6</span></a>
+		<a href="#" title="cultural7"><span><img src="data1/tooltips/cultural7.jpg" alt="cultural7"/>7</span></a>
+		<a href="#" title="cultural8"><span><img src="data1/tooltips/cultural8.jpg" alt="cultural8"/>8</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">wow slider</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+     
+     
+  
+     
+      </div>
+      
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+     </div>
+     
+ <div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1>Deportes</h1>
+      </div>
+      <div data-role="content" align="center">
+       <div>
+        <h2> La Dirección General de Educación Tecnológica Industrial </h2>
+       </div>
+       <h2 align="center">Unete a uno de nuestros  equipos los cuales son:</h2>
+       <p>Equipos de Futbol varonil y femenil</p>
+       <p>Equipos de Basquetbol varonil y femenil</p>
+       <p>Equipos de Voleivol</p>
+       
+       
+       <div>
+     
+     
+     
+     
+     <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container2">
+<div class="ws_images"><ul>
+		<li><img src="data2/images/basque2.jpg" alt="basque2" title="basque2" id="wows2_0"/></li>
+		<li><img src="data2/images/basquet.jpg" alt="basquet" title="basquet" id="wows2_1"/></li>
+		<li><img src="data2/images/basquet1.jpg" alt="basquet1" title="basquet1" id="wows2_2"/></li>
+		<li><img src="data2/images/basquetfemenil.jpg" alt="basquetfemenil" title="basquetfemenil" id="wows2_3"/></li>
+		<li><img src="data2/images/boli.jpg" alt="boli" title="boli" id="wows2_4"/></li>
+		<li><img src="data2/images/boli2.jpg" alt="boli2" title="boli2" id="wows2_5"/></li>
+		<li><a href="http://wowslider.com"><img src="data2/images/boli3.jpg" alt="bootstrap slider" title="boli3" id="wows2_6"/></a></li>
+		<li><img src="data2/images/escolta.jpg" alt="escolta" title="escolta" id="wows2_7"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="basque2"><span><img src="data2/tooltips/basque2.jpg" alt="basque2"/>1</span></a>
+		<a href="#" title="basquet"><span><img src="data2/tooltips/basquet.jpg" alt="basquet"/>2</span></a>
+		<a href="#" title="basquet1"><span><img src="data2/tooltips/basquet1.jpg" alt="basquet1"/>3</span></a>
+		<a href="#" title="basquetfemenil"><span><img src="data2/tooltips/basquetfemenil.jpg" alt="basquetfemenil"/>4</span></a>
+		<a href="#" title="boli"><span><img src="data2/tooltips/boli.jpg" alt="boli"/>5</span></a>
+		<a href="#" title="boli2"><span><img src="data2/tooltips/boli2.jpg" alt="boli2"/>6</span></a>
+		<a href="#" title="boli3"><span><img src="data2/tooltips/boli3.jpg" alt="boli3"/>7</span></a>
+		<a href="#" title="escolta"><span><img src="data2/tooltips/escolta.jpg" alt="escolta"/>8</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">http://wowslider.com/</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine2/wowslider.js"></script>
+<script type="text/javascript" src="engine2/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+     
+     
+     
+     
+     
+     
+       
+       
+       </div>
+       
+       
+      </div>
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+     </div>
+       
+       
+ <div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1>Ubicación</h1>
+      </div>
+      <div data-role="content" align="center">
+       <div>
+        <h2> Plantel CBTis No. 16 </h2>
+        <p> Domicilio: Fray Bartolomé de las Casas, Colonia Ricardo Flores Magon</p>
+        <p> Codigo Postal: 74240</p>
+        <p>  Telefono:  01 244 446 2961</p>
+        
+        <div>
+        
+            <div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href="https://www.google.com.mx/maps/uv?hl=es&pb=!1s0x85cfb47405555555:0x19bb49f598a8846f!2m19!2m2!1i80!2i80!3m1!2i20!16m13!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!3m1!7e115!4s/maps/place/cbtis%2B16%2Batlixco%2Bpuebla/@18.9030631,-98.4245918,3a,75y,24.19h,90t/data%3D*213m4*211e1*213m2*211s8a2LokXOdkS4krkF-NZC8w*212e0*214m2*213m1*211s0x85cfb47405555555:0x19bb49f598a8846f!5scbtis+16+atlixco+puebla+-+Buscar+con+Google&imagekey=!1e2!2s8a2LokXOdkS4krkF-NZC8w&sa=X&ved=0ahUKEwif4sewk5vUAhXEylQKHTEGBgUQpx8IezAO" target="_self" data-role="button">
+         <h2> Mapa </h2>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+       
+        </div>
+       
+       
+         <div>
+       <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+      <h1> CBTis </h1>
+       <div>
+       
+         <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image46','','imagenes/imag6.jpg',1)"><img src="imagenes/imag4.jpg" width="233" height="170" id="Image46"></a> </div>
+     </div>
+    </div>
+      </div>
+       
+        <div data-role="main" class="ui-content" align="center">
+    <div style="width:40%;">
+    <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+     <li class="ui-first-child ui-last-child">
+       <a href="https://es-la.facebook.com/cbtis16atlixco/" target="_self" data-role="button">
+         <center><h2> link</h2></center>
+        </a>
+      </li>
+      </ul>
+     </div>
+    </div>
+    
+       
+       
+       
+       </div>
+      </div>
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+     </div>
+       
+       
+ <div data-role="page" id="Pagina9" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+       <h1>Datos del Alumno:</h1>
+      </div>
+ <div data-role="content" align="center">
+       <div>
+        <center><h2> Nombre: Saray Violeta Othon Higuera  </h2></center>
+       <br>
+       <center><h2>Grado y Grupo: 4° "F"</h2></center>
+      <br>
+        <center><h2> Especialidad: Programación  </h2></center>
+       <br>
+       <center><h2>Desarrolla Aplicaciones Web</h2></center>
+       <br>
+       <center><h2>Dirección: Boulebard Rafael Moreno Valle
+       <br>
+                   Col. Los Angeles #804 B</h2></center>
+       </div>
+      <div>
+        <center><img src="imagenes/fotodeperfil.jpg" width="227" height="204"/></center>
+   </div>
+       
+      <div data-role="footer" data-theme="a" data-position="fixed">
+       <h4>Proyecto Final, SVOH</h4>
+      </div>
+     </div>
+       
+       
+       
+       
+</body>
+</html>
